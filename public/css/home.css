@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+}
+
+header{
+    background-color: rgb(112, 164, 248);
+    padding: 1em;
+    display: flex; 
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    /* float: left; */
+    margin: auto;
+    margin-left: 0;
+}
+
+.btnsHeader{
+    /* float: right; */
+    margin: auto;
+    margin-right: 0;
+    float: right;
+}
+
+.btnsHeader button{
+    padding: 0.5em;
+    margin-left: 1em;
+}
+
+
+#articles{
+    background-color: rgb(228, 228, 228);
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding: 1em;
+}
+
+.article img{
+    width: 40vw;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.article button{
+    width: 30%;
+    margin: auto;
+}
+
+footer{
+    background-color: rgb(112, 164, 248);
+    padding: 1em;
+    display: flex; 
+    margin-top: 2em;
+}
+
+footer a{
+    text-decoration: none;
+    margin: auto;
+    color: black;
+}

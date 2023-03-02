@@ -1,0 +1,69 @@
+p {
+    margin: 2em;
+    text-align: center;
+}
+
+#formLogin form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#labels {
+    background-image: url(../images/akilditu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#labels label {
+    margin-top: 23px;
+}
+
+#inputs {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 155px;
+    text-align: center;
+}
+
+#inputs input {
+    margin-top: 23px;
+    width: 200px;
+    height: 25px;
+    background-color: rgba(211, 211, 211, 0.565);
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#inputs a {
+    position: relative;
+    margin-top: 15px;
+    font-size: 15px;
+    color: gray;
+    cursor: pointer;
+}
+
+#inputs input:focus {
+    outline: none;
+}
+
+#btnConnexion {
+    background-color: black !important;
+    width: 100px !important;
+    height: 30px !important;
+    color: white;
+    padding: 3px !important;
+    margin-left: 50px;
+    cursor: pointer;
+}
