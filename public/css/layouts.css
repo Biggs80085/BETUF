@@ -58,7 +58,6 @@ footer {
     padding: 1em;
     display: flex;
     margin-top: 2em;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -68,4 +67,12 @@ footer a {
     margin: auto;
     color: black;
     font-size: 17px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.content {
+    min-height: 75.8%;
 }

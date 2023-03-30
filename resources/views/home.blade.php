@@ -1,8 +1,8 @@
 @extends('layouts.main')
 <link rel="stylesheet" href="/css/home.css" />
 @section('content')
-<div>
-        <img src="" alt="LogoBETuF">
+    <div class="d-flex justify-content-center">
+        <img src="./images/logoBETUF.png" width="300" alt="LogoBETuF">
     </div>
 
     <div id="articles">
