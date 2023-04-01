@@ -7,7 +7,7 @@
             <p>Identifiant :  {{ $user->id }} </p>
             <p>Pôle : {{ $user->pole }}</p>
             <p>Secteur : {{ $user->roleUser }}</p>
-            <p>Prochaine intervention : </p>
+            <p>Prochaine intervention : {{ date('d/m/Y', strtotime($user->dateIntervention)) }}</p>
         </div>
         
     </div>

@@ -12,6 +12,18 @@ class InterventionController extends Controller
     function index(){
         return view('admin.addIntervention');
     }
+
+    function indexPlanning(){
+        $user = DB::table('users')
+            ->join('interventions', 'users.id', '=', 'interventions.userID')
+            ->where('interventions.dateIntervention', '>', now())
+            ->orderBy('interventions.dateIntervention', 'asc')
+            ->first();
+        
+        return view('planning', ['user' => $user]);
+        
+    }
+
     function add(Request $request){
         Intervention::create([
             'tunnelID' => $request->tunnelID,
