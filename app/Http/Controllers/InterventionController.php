@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Intervention;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class InterventionController extends Controller
@@ -17,9 +18,11 @@ class InterventionController extends Controller
         $user = DB::table('users')
             ->join('interventions', 'users.id', '=', 'interventions.userID')
             ->where('interventions.dateIntervention', '>', now())
+            ->where('users.id' , '=', Auth::user()->id)
             ->orderBy('interventions.dateIntervention', 'asc')
             ->first();
-        
+        if($user == null)
+            $user = Auth::user();
         return view('planning', ['user' => $user]);
         
     }

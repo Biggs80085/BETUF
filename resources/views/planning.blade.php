@@ -7,7 +7,11 @@
             <p>Identifiant :  {{ $user->id }} </p>
             <p>Pôle : {{ $user->pole }}</p>
             <p>Secteur : {{ $user->roleUser }}</p>
-            <p>Prochaine intervention : {{ date('d/m/Y', strtotime($user->dateIntervention)) }}</p>
+            @if($user->dateIntervention)
+                <p>Prochaine intervention : {{ date('d/m/Y', strtotime($user->dateIntervention))}}</p>
+            @else
+                <p>Prochaine intervention : Aucune Intervention</p>
+            @endif
         </div>
         
     </div>

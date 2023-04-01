@@ -33,6 +33,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Planning
 Route::get('/planning', [InterventionController::class, 'indexPlanning']);
 Route::resource('/calendar', EventController::class);
+// Carte
+
 
 // Admin
 Route::get('/addIntervention', [InterventionController::class, 'index']);
