@@ -39,6 +39,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/carte') }}">Carte des tunnels</a>
+                            </li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -54,6 +57,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif-->
+                            
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/planning') }}">Planning</a>

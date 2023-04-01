@@ -10,6 +10,9 @@ class TunnelController extends Controller
     function index(){
         return view('admin.addTunnel');
     }
+    function indexCarte(){
+        return view('carte');
+    }
     function add(Request $request){
         Tunnel::create([
             'coordGPS' => $request->coordGPS,

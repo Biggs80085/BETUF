@@ -4,6 +4,15 @@
     <div class="d-flex justify-content-center">
         <img src="./images/logoBETUF.png" width="300" alt="LogoBETuF">
     </div>
+    <div class="redirection">
+        @if($user)
+            @if($user->statutAdmin ==1)
+                <a href="{{url('register')}}">Créer User</a>
+                <a href="{{url('addIntervention')}}">Créer Intervention</a>
+                <a href="{{url('addTunnel')}}">Créer Tunnel</a>
+            @endif
+        @endif
+    </div>
 
     <div id="articles">
         <div class="article">

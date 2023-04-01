@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home')->with('user', Auth::user());
 });
 
 //Route::get('/login', [AuthController::class,'index']);
@@ -34,7 +34,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/planning', [InterventionController::class, 'indexPlanning']);
 Route::resource('/calendar', EventController::class);
 // Carte
-
+Route::get('/carte', [TunnelController::class, 'indexCarte']);
 
 // Admin
 Route::get('/addIntervention', [InterventionController::class, 'index']);
